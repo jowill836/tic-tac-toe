@@ -1,0 +1,16 @@
+<h1>Au tour du joueur: {{player}}</h1>
+
+<button nbButton outline statut = "danger" (click)="newGame()">Commencer un nouveau jeu</button>
+
+<h2 *ngIf="winner">Le joueur {{winner}} a gagné!!</h2>
+
+<pre>
+    <app-square 
+        *ngFor="let val of squares; let i = index"
+        [value]="val"
+        (click)="move(i)"
+        >
+
+
+    </app-square>
+</pre>
